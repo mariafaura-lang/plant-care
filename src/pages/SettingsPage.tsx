@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
 import { PageHeader } from '../components/layout/PageHeader'
-import { Card, Segmented } from '../components/ui/ui'
+import { Card, Segmented, TextInput } from '../components/ui/ui'
 import { useSettings } from '../hooks/useSettings'
 import { useTheme } from '../hooks/useTheme'
+import { getPlantbookKey } from '../lib/integrations/plantbook'
 import type { Hemisphere, ThemePreference } from '../types'
 
 function Section({ title, description, children }: { title: string; description?: string; children: ReactNode }) {
@@ -52,10 +53,25 @@ export function SettingsPage() {
           </Section>
         )}
 
-        <Section
-          title="Próximamente"
-          description="Notificaciones de riego (fase 3), integraciones opcionales (fases 2 y 4) y copia de seguridad (fase 5)."
-        >
+        {settings && (
+          <Section
+            title="Open Plantbook (opcional)"
+            description="Para buscar especies que no están en el catálogo. Es gratis: regístrate en open.plantbook.io, crea una API key y pégala aquí. Se guarda solo en este dispositivo."
+          >
+            <TextInput
+              type="password"
+              autoComplete="off"
+              placeholder="API key de Open Plantbook"
+              defaultValue={settings.plantbookApiKey ?? ''}
+              onBlur={(e) => update('plantbookApiKey', e.target.value.trim() || undefined)}
+            />
+            <p className="text-xs text-muted">
+              {getPlantbookKey(settings) ? '✓ Búsqueda en Open Plantbook activada.' : 'Sin key: solo se usa el catálogo incluido.'}
+            </p>
+          </Section>
+        )}
+
+        <Section title="Próximamente" description="Notificaciones de riego (fase 3) y copia de seguridad (fase 5).">
           {null}
         </Section>
       </div>

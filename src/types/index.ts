@@ -29,8 +29,8 @@ export interface Species {
   waterDaysSummer: number
   waterDaysWinter: number
   difficulty: Difficulty
-  /** Tóxica para perros y/o gatos. */
-  petToxic: boolean
+  /** Tóxica para perros y/o gatos. `null` = no se sabe (p. ej. especies de Open Plantbook). */
+  petToxic: boolean | null
   toxicityNote?: string
   tip: string
   source?: SpeciesSource

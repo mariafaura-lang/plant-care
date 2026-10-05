@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { Droplets, Leaf, Settings, Stethoscope } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const tabs = [
   { to: '/', label: 'Hoy', icon: Droplets, end: true },
@@ -10,6 +10,7 @@ const tabs = [
 ]
 
 export function BottomNav() {
+  const { pathname } = useLocation()
   return (
     <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/95 backdrop-blur">
       <ul className="mx-auto flex max-w-lg">
@@ -21,7 +22,8 @@ export function BottomNav() {
               className={({ isActive }) =>
                 clsx(
                   'flex min-h-14 flex-col items-center justify-center gap-0.5 text-xs font-medium transition',
-                  isActive ? 'text-accent' : 'text-muted',
+                  // El catálogo se abre desde "Plantas": mantenemos esa pestaña marcada.
+                  isActive || (to === '/plantas' && pathname.startsWith('/catalogo')) ? 'text-accent' : 'text-muted',
                 )
               }
             >
