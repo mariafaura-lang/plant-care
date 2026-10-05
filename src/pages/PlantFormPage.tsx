@@ -10,6 +10,7 @@ import { usePlant, usePlants } from '../hooks/usePlants'
 import { useSpeciesList } from '../hooks/useSpecies'
 import { today } from '../lib/dates'
 import { createPlant, roomSuggestions, updatePlant, type PlantInput } from '../lib/plants'
+import { addPastWatering } from '../lib/wateringActions'
 import { findSpecies } from '../lib/species'
 import { POT_SIZE_LABELS, POT_TYPE_LABELS, type PotSize, type PotType } from '../types'
 
@@ -37,6 +38,8 @@ function PlantForm({ id, initial }: { id?: string; initial: PlantInput }) {
   const [form, setForm] = useState<PlantInput>(initial)
   const [pickerOpen, setPickerOpen] = useState(false)
   const [saving, setSaving] = useState(false)
+  /** Solo al crear: cuándo se regó por última vez, para empezar el calendario con buen pie. */
+  const [lastWatered, setLastWatered] = useState('')
 
   const set = <K extends keyof PlantInput>(key: K, value: PlantInput[K]) => setForm((f) => ({ ...f, [key]: value }))
   const selectedSpecies = findSpecies(form.speciesId, species)
@@ -51,6 +54,7 @@ function PlantForm({ id, initial }: { id?: string; initial: PlantInput }) {
         navigate(`/plantas/${id}`, { replace: true })
       } else {
         const newId = await createPlant(form)
+        if (lastWatered) await addPastWatering(newId, lastWatered)
         navigate(`/plantas/${newId}`, { replace: true })
       }
     } finally {
@@ -125,6 +129,12 @@ function PlantForm({ id, initial }: { id?: string; initial: PlantInput }) {
           />
           <p className="text-xs text-muted">{POT_SIZE_LABELS[form.potSize]} de diámetro</p>
         </div>
+
+        {!id && (
+          <Field label="¿Cuándo la regaste por última vez? (opcional)" hint="Si lo dejas vacío, la app te pedirá regarla hoy.">
+            <TextInput type="date" value={lastWatered} max={today()} onChange={(e) => setLastWatered(e.target.value)} />
+          </Field>
+        )}
 
         <Field label="Fecha de compra (opcional)">
           <TextInput type="date" value={form.purchaseDate ?? ''} max={today()} onChange={(e) => set('purchaseDate', e.target.value || undefined)} />

@@ -1,18 +1,35 @@
-import { BookOpen, Leaf, Plus } from 'lucide-react'
+import { BookOpen, Droplets, Leaf, Plus } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../components/layout/PageHeader'
 import { PlantCard } from '../components/plants/PlantCard'
-import { EmptyState, SearchInput } from '../components/ui/ui'
+import { Badge, EmptyState, SearchInput } from '../components/ui/ui'
 import { usePlants } from '../hooks/usePlants'
 import { useSpeciesList } from '../hooks/useSpecies'
+import { useWateringSchedule } from '../hooks/useWateringSchedule'
+import { wateringStatusText } from '../lib/wateringText'
 import { filterPlants, groupByRoom } from '../lib/plants'
 import { findSpecies } from '../lib/species'
+import type { PlantSchedule } from '../lib/watering'
+
+function WateringBadge({ entry, today }: { entry?: PlantSchedule; today: string }) {
+  if (!entry) return null
+  const tone = entry.status === 'atrasada' ? 'danger' : entry.status === 'hoy' ? 'water' : 'neutral'
+  return (
+    <div className="mt-1">
+      <Badge tone={tone}>
+        <Droplets className="size-3" /> {wateringStatusText(entry, today)}
+      </Badge>
+    </div>
+  )
+}
 
 export function PlantsPage() {
   const plants = usePlants()
   const species = useSpeciesList()
   const [query, setQuery] = useState('')
+  const { schedule, today } = useWateringSchedule()
+  const scheduleById = new Map(schedule?.map((e) => [e.plant.id, e]))
 
   const groups = plants ? groupByRoom(filterPlants(plants, query, species)) : []
   const count = plants?.length ?? 0
@@ -59,7 +76,12 @@ export function PlantsPage() {
             </h2>
             <div className="space-y-2">
               {group.plants.map((plant) => (
-                <PlantCard key={plant.id} plant={plant} species={findSpecies(plant.speciesId, species)} />
+                <PlantCard
+                  key={plant.id}
+                  plant={plant}
+                  species={findSpecies(plant.speciesId, species)}
+                  extra={<WateringBadge entry={scheduleById.get(plant.id)} today={today} />}
+                />
               ))}
             </div>
           </section>

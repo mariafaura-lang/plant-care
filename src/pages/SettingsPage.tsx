@@ -1,6 +1,10 @@
 import type { ReactNode } from 'react'
 import { PageHeader } from '../components/layout/PageHeader'
-import { Card, Segmented, TextInput } from '../components/ui/ui'
+import { CalendarPlus } from 'lucide-react'
+import { Button, Card, Segmented, TextInput } from '../components/ui/ui'
+import { NotificationSettings } from '../components/watering/NotificationSettings'
+import { useWateringSchedule } from '../hooks/useWateringSchedule'
+import { buildWateringCalendar, downloadFile } from '../lib/ics'
 import { useSettings } from '../hooks/useSettings'
 import { useTheme } from '../hooks/useTheme'
 import { getPlantbookKey } from '../lib/integrations/plantbook'
@@ -21,6 +25,7 @@ function Section({ title, description, children }: { title: string; description?
 export function SettingsPage() {
   const { theme, setTheme } = useTheme()
   const { settings, update } = useSettings()
+  const { schedule } = useWateringSchedule()
 
   return (
     <>
@@ -71,7 +76,28 @@ export function SettingsPage() {
           </Section>
         )}
 
-        <Section title="Próximamente" description="Notificaciones de riego (fase 3) y copia de seguridad (fase 5).">
+        <Section title="Avisos de riego">
+          <NotificationSettings />
+        </Section>
+
+        <Section
+          title="Calendario"
+          description="Descarga un archivo .ics con el riego de cada planta para Google Calendar, Apple Calendar u Outlook. Es una foto del momento: si cambias plantas o riegos, vuelve a exportarlo."
+        >
+          <Button
+            variant="secondary"
+            className="w-full"
+            disabled={!schedule?.length}
+            onClick={() => {
+              if (!schedule || !settings) return
+              downloadFile(buildWateringCalendar(schedule, { notificationHour: settings.notificationHour }), 'riego-mis-plantas.ics', 'text/calendar')
+            }}
+          >
+            <CalendarPlus className="size-4" /> Exportar calendario de riego
+          </Button>
+        </Section>
+
+        <Section title="Próximamente" description="Copia de seguridad: exportar e importar tus datos (fase 5).">
           {null}
         </Section>
       </div>

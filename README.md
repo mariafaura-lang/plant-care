@@ -4,7 +4,7 @@ App web (PWA) para cuidar tus plantas de interior: recordatorios de riego,
 catálogo de especies y diagnóstico de problemas. Pensada para el móvil, con
 modo oscuro y **datos 100 % locales** (IndexedDB), sin cuentas ni servidor.
 
-> En desarrollo por fases. Estado actual: **fase 2 — Mis plantas y catálogo.**
+> En desarrollo por fases. Estado actual: **fase 3 — riego.**
 
 ## Arrancar en local
 
@@ -52,5 +52,32 @@ Para buscar especies que no están en el catálogo, regístrate en
 `VITE_PLANTBOOK_API_KEY` (ver `.env.example`), pero ten en cuenta que entonces
 queda dentro del código publicado. Plantbook no da riego ni toxicidad: el riego
 se estima a partir de la humedad de suelo recomendada.
+
+## Cómo se calcula el riego
+
+Está en `src/lib/watering.ts` (con tests en `watering.test.ts`):
+
+```
+intervalo = base de la especie según la estación × maceta × tamaño × ajuste personal
+  · estación: entre el intervalo de verano y el de invierno, con una curva suave
+    (pleno invierno a mediados de enero y pleno verano a mediados de julio;
+    al revés en el hemisferio sur, configurable en Ajustes)
+  · maceta:   barro ×0,8 · plástico ×1,1 · cerámica esmaltada ×1
+  · tamaño:   pequeña ×0,8 · mediana ×1 · grande ×1,25
+  · especie desconocida: 7 días en verano y 14 en invierno
+próximo riego = último riego + intervalo  (o la fecha de "Más tarde", si es posterior)
+```
+
+**Riego adaptativo:** con 3 o más riegos registrados, compara cada intervalo
+real con el calculado en esa fecha. Con la mediana de las proporciones (así
+unas vacaciones no lo descolocan), propone un ajuste personal si la diferencia
+supera el 20 %. Se guarda como factor, no como días fijos, para que se siga
+adaptando a la estación.
+
+**Avisos:** como no hay servidor, el aviso salta al abrir la app (o mientras
+está abierta) a partir de la hora elegida, una vez al día. En iPhone solo
+funcionan con la app instalada en la pantalla de inicio (iOS 16.4+). Para
+recordatorios sin abrir la app, en Ajustes se puede exportar un calendario
+`.ics`.
 
 El despliegue gratuito (Netlify, Vercel o GitHub Pages) se documentará en la fase 5.

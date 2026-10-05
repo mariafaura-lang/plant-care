@@ -53,8 +53,12 @@ export interface Plant {
   potType: PotType
   potSize: PotSize
   notes?: string
-  /** Intervalo de riego fijado a mano o aceptado desde la sugerencia adaptativa (días). */
-  intervalOverride?: number
+  /**
+   * Ajuste personal del riego, aceptado desde la sugerencia adaptativa:
+   * multiplica el intervalo calculado (0,8 = regar un 20 % más a menudo).
+   * Se guarda como factor y no como días para que siga ajustándose por estación.
+   */
+  wateringFactor?: number
   /** Si se pulsó "Más tarde", no se vuelve a pedir riego antes de esta fecha. */
   snoozedUntil?: ISODate
   createdAt: ISODateTime
@@ -110,6 +114,8 @@ export interface Settings {
   notificationsEnabled: boolean
   /** Hora del aviso diario de riego (0-23). */
   notificationHour: number
+  /** Último día en que se mostró el aviso de riego (para no repetirlo). */
+  lastNotifiedDay?: ISODate
   /** Keys introducidas por el usuario (se guardan solo en este dispositivo). */
   plantbookApiKey?: string
   visionApiKey?: string

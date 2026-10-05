@@ -25,7 +25,7 @@ export async function updatePlant(id: string, input: PlantInput, database: Plant
     updatedAt: new Date().toISOString(),
     // Estos campos no se editan desde el formulario: se conservan.
     snoozedUntil: existing.snoozedUntil,
-    intervalOverride: input.intervalOverride ?? existing.intervalOverride,
+    wateringFactor: existing.wateringFactor,
   })
 }
 

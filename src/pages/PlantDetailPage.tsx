@@ -1,9 +1,10 @@
-import { CalendarDays, DoorOpen, Flower, Pencil, StickyNote, Trash2 } from 'lucide-react'
+import { CalendarDays, Camera, DoorOpen, Flower, Pencil, StickyNote, Trash2 } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { PageHeader } from '../components/layout/PageHeader'
 import { PlantPhoto } from '../components/plants/PlantPhoto'
 import { SpeciesCareInfo } from '../components/species/SpeciesCareInfo'
+import { WateringSection } from '../components/watering/WateringSection'
 import { Button, Card, Sheet } from '../components/ui/ui'
 import { usePlant } from '../hooks/usePlants'
 import { useSpeciesList } from '../hooks/useSpecies'
@@ -64,7 +65,16 @@ export function PlantDetailPage() {
       />
 
       <div className="space-y-4 px-4 pb-6">
-        <PlantPhoto photo={plant.photo} alt={plant.nickname} className="aspect-square w-full rounded-3xl" />
+        {plant.photo ? (
+          <PlantPhoto photo={plant.photo} alt={plant.nickname} className="aspect-square w-full rounded-3xl" />
+        ) : (
+          <Link
+            to={`/plantas/${plant.id}/editar`}
+            className="flex h-28 items-center justify-center gap-3 rounded-3xl bg-accent-soft text-sm font-medium text-accent"
+          >
+            <Camera className="size-5" /> Añadir una foto
+          </Link>
+        )}
 
         <Card className="divide-y divide-border py-1">
           <InfoRow icon={<DoorOpen className="size-5" />} label="Habitación">
@@ -84,6 +94,8 @@ export function PlantDetailPage() {
             </InfoRow>
           )}
         </Card>
+
+        <WateringSection plant={plant} species={species} />
 
         <section className="space-y-2">
           <h2 className="text-lg font-semibold">Cuidados</h2>
