@@ -4,7 +4,7 @@ App web (PWA) para cuidar tus plantas de interior: recordatorios de riego,
 catálogo de especies y diagnóstico de problemas. Pensada para el móvil, con
 modo oscuro y **datos 100 % locales** (IndexedDB), sin cuentas ni servidor.
 
-> En desarrollo por fases. Estado actual: **fase 3 — riego.**
+> En desarrollo por fases. Estado actual: **fase 4 — diagnóstico.**
 
 ## Arrancar en local
 
@@ -79,5 +79,31 @@ está abierta) a partir de la hora elegida, una vez al día. En iPhone solo
 funcionan con la app instalada en la pantalla de inicio (iOS 16.4+). Para
 recordatorios sin abrir la app, en Ajustes se puede exportar un calendario
 `.ics`.
+
+## Diagnóstico
+
+El asistente «¿Qué le pasa a mi planta?» pregunta por síntomas y contexto, y un
+motor de reglas (`src/lib/diagnosis.ts`, con tests) devuelve las causas más
+probables con su tratamiento paso a paso. Todos los datos están en
+`src/data/diagnosis-rules.json`:
+
+- `symptoms`: síntomas que se pueden marcar.
+- `questions`: preguntas de contexto. Pueden depender de los síntomas
+  (`showIfSymptoms` / `hideIfSymptoms`) o deducirse de la planta (`derived`:
+  humedad y luz de la especie, riego atrasado).
+- `causes`: causas con resumen, urgencia, tratamiento y prevención.
+- `rules`: cada regla suma (o resta) `weight` a una causa si se marcó alguno de
+  sus `symptoms` y TODAS sus `answers` coinciden. Una causa solo aparece si
+  la apoya algún síntoma; la probabilidad es su parte del total.
+
+Para añadir una causa o afinar las reglas basta con editar el JSON; el test
+`diagnosis.test.ts` comprueba que todo está bien enlazado. Cada diagnóstico se
+guarda en el historial de la planta.
+
+**Diagnóstico por foto:** desactivado y oculto. Solo está preparado el punto de
+integración en `src/lib/integrations/vision.ts` (interfaz, conversión de la
+imagen e instrucciones para el modelo usando los ids de causa). La tarjeta
+aparece únicamente si al compilar se definen `VITE_VISION_ENDPOINT` y
+`VITE_VISION_API_KEY`.
 
 El despliegue gratuito (Netlify, Vercel o GitHub Pages) se documentará en la fase 5.

@@ -5,6 +5,7 @@ import { PageHeader } from '../components/layout/PageHeader'
 import { PlantPhoto } from '../components/plants/PlantPhoto'
 import { SpeciesCareInfo } from '../components/species/SpeciesCareInfo'
 import { WateringSection } from '../components/watering/WateringSection'
+import { PlantDiagnoses } from '../components/diagnosis/PlantDiagnoses'
 import { Button, Card, Sheet } from '../components/ui/ui'
 import { usePlant } from '../hooks/usePlants'
 import { useSpeciesList } from '../hooks/useSpecies'
@@ -96,6 +97,8 @@ export function PlantDetailPage() {
         </Card>
 
         <WateringSection plant={plant} species={species} />
+
+        <PlantDiagnoses plant={plant} />
 
         <section className="space-y-2">
           <h2 className="text-lg font-semibold">Cuidados</h2>

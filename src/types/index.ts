@@ -116,18 +116,14 @@ export interface Settings {
   notificationHour: number
   /** Último día en que se mostró el aviso de riego (para no repetirlo). */
   lastNotifiedDay?: ISODate
-  /** Keys introducidas por el usuario (se guardan solo en este dispositivo). */
+  /** API key de Open Plantbook introducida por el usuario (se guarda solo en este dispositivo). */
   plantbookApiKey?: string
-  visionApiKey?: string
-  visionEndpoint?: string
-  visionEnabled: boolean
 }
 
 export const DEFAULT_SETTINGS: Settings = {
   hemisphere: 'norte',
   notificationsEnabled: false,
   notificationHour: 9,
-  visionEnabled: false,
 }
 
 // ─── Etiquetas para la interfaz ──────────────────────────────────────────────

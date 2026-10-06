@@ -2,6 +2,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import { AppShell } from './components/layout/AppShell'
 import { CatalogPage } from './pages/CatalogPage'
 import { DiagnosePage } from './pages/DiagnosePage'
+import { DiagnosisDetailPage } from './pages/DiagnosisDetailPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PlantDetailPage } from './pages/PlantDetailPage'
 import { PlantFormPage } from './pages/PlantFormPage'
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="catalogo" element={<CatalogPage />} />
           <Route path="catalogo/:speciesId" element={<SpeciesDetailPage />} />
           <Route path="diagnostico" element={<DiagnosePage />} />
+          <Route path="diagnostico/:id" element={<DiagnosisDetailPage />} />
           <Route path="ajustes" element={<SettingsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
