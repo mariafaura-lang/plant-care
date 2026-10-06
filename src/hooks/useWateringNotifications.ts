@@ -1,25 +1,29 @@
 import { useEffect } from 'react'
-import { notificationMessage, shouldNotify, showNotification } from '../lib/notifications'
-import { saveSetting } from '../lib/settings'
-import { useWateringSchedule } from './useWateringSchedule'
+import { runDailyReminder } from '../lib/dailyReminder'
+import { showNotification } from '../lib/notifications'
+import { setBackgroundReminder } from '../lib/pwa'
+import { useSettings } from './useSettings'
 
 /**
- * Lanza el aviso diario de riego mientras la app está abierta: al abrirla, al
- * volver a ella y cada 15 minutos (por si se cruza la hora elegida).
+ * Aviso diario de riego mientras la app está abierta: al abrirla, al volver a
+ * ella y cada 15 minutos (por si se cruza la hora elegida). Además activa el
+ * aviso en segundo plano donde el navegador lo permite.
  */
 export function useWateringNotifications() {
-  const { schedule, settings, today } = useWateringSchedule()
+  const { settings } = useSettings()
+  const enabled = settings?.notificationsEnabled ?? false
 
   useEffect(() => {
-    if (!schedule || !settings) return
-    const check = async () => {
-      const pending = schedule.filter((e) => e.status === 'atrasada' || e.status === 'hoy')
-      if (!shouldNotify(settings, new Date(), today, pending.length)) return
-      const { title, body } = notificationMessage(pending)
-      if (await showNotification(title, body)) await saveSetting('lastNotifiedDay', today)
-    }
+    setBackgroundReminder(enabled)
+    if (!enabled) return
+    const check = () => void runDailyReminder(showNotification)
     check()
     const timer = setInterval(check, 15 * 60_000)
-    return () => clearInterval(timer)
-  }, [schedule, settings, today])
+    const onVisible = () => document.visibilityState === 'visible' && check()
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      clearInterval(timer)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [enabled, settings?.notificationHour, settings?.hemisphere])
 }

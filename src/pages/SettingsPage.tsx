@@ -2,6 +2,8 @@ import type { ReactNode } from 'react'
 import { PageHeader } from '../components/layout/PageHeader'
 import { CalendarPlus } from 'lucide-react'
 import { Button, Card, Segmented, TextInput } from '../components/ui/ui'
+import { BackupSettings } from '../components/settings/BackupSettings'
+import { InstallSettings } from '../components/settings/InstallSettings'
 import { NotificationSettings } from '../components/watering/NotificationSettings'
 import { useWateringSchedule } from '../hooks/useWateringSchedule'
 import { buildWateringCalendar, downloadFile } from '../lib/ics'
@@ -31,6 +33,10 @@ export function SettingsPage() {
     <>
       <PageHeader title="Ajustes" />
       <div className="space-y-3 px-4">
+        <Section title="Instalar la app" description="Tenla a mano como una app más y úsala sin conexión. En iPhone, además, hace falta para recibir avisos.">
+          <InstallSettings />
+        </Section>
+
         <Section title="Apariencia">
           <Segmented<ThemePreference>
             label="Tema"
@@ -97,8 +103,11 @@ export function SettingsPage() {
           </Button>
         </Section>
 
-        <Section title="Próximamente" description="Copia de seguridad: exportar e importar tus datos (fase 5).">
-          {null}
+        <Section
+          title="Copia de seguridad"
+          description="Tus datos solo están en este dispositivo. Exporta una copia de vez en cuando (o para pasarlos a otro móvil) y guárdala en tu nube o correo."
+        >
+          <BackupSettings />
         </Section>
       </div>
     </>

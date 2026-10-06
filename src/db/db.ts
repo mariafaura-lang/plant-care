@@ -27,14 +27,6 @@ export class PlantDB extends Dexie {
       customSpecies: 'id, commonName',
       settings: 'key',
     })
-
-    // Si se abre la app en otra pestaña con una versión más nueva del esquema,
-    // cerramos esta conexión y recargamos para no bloquear la actualización.
-    this.on('versionchange', () => {
-      this.close()
-      if (typeof location !== 'undefined') location.reload()
-      return false
-    })
   }
 }
 

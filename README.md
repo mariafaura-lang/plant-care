@@ -1,10 +1,28 @@
 # Mis Plantas 🌿
 
-App web (PWA) para cuidar tus plantas de interior: recordatorios de riego,
-catálogo de especies y diagnóstico de problemas. Pensada para el móvil, con
-modo oscuro y **datos 100 % locales** (IndexedDB), sin cuentas ni servidor.
+App web para cuidar tus plantas de interior: recordatorios de riego, catálogo de
+especies y diagnóstico de problemas. Pensada para el móvil, con modo oscuro,
+instalable como app (PWA) y usable sin conexión.
 
-> En desarrollo por fases. Estado actual: **fase 4 — diagnóstico.**
+**Gratis y privada:** no hay cuentas ni servidor. Los datos se guardan solo en
+tu dispositivo (IndexedDB). Para no perderlos o pasarlos a otro móvil, usa
+**Ajustes → Copia de seguridad**.
+
+## Qué hace
+
+- **Hoy:** plantas que toca regar, atrasadas y próximos 7 días. Botones
+  *Regada* (con deshacer), *Más tarde* (1-3 días) y *Regar todas*.
+- **Mis plantas:** apodo, especie, habitación, foto, fecha de compra, maceta y
+  notas. Agrupadas por habitación, con buscador.
+- **Catálogo** de 54 especies con luz, humedad, temperatura, riego,
+  dificultad, toxicidad para mascotas y un consejo. Opcional: búsqueda en
+  Open Plantbook.
+- **Riego inteligente:** se ajusta a la estación, la maceta y su tamaño, y
+  aprende de tus riegos reales. Avisos del navegador y exportación a calendario
+  (`.ics`).
+- **Diagnóstico** paso a paso por síntomas, con causas probables y tratamiento.
+  Se guarda en el historial de cada planta.
+- **Copia de seguridad:** exportar e importar todo en un archivo JSON.
 
 ## Arrancar en local
 
@@ -12,15 +30,58 @@ Necesitas [Node.js](https://nodejs.org/) 20 o superior.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        # http://localhost:5173 (sin service worker)
 npm test           # tests con Vitest
+npm run lint       # linter (oxlint)
 npm run build      # build de producción en dist/
+npm run preview    # sirve dist/ en http://localhost:4173 (con service worker y modo sin conexión)
 ```
+
+Para probarla en el móvil, `npm run dev -- --host` y abre la dirección de red
+que aparece (el móvil debe estar en la misma wifi). Los avisos y la
+instalación necesitan HTTPS, así que esas dos cosas solo se pueden probar
+una vez publicada.
+
+## Publicarla gratis
+
+La app es estática (solo archivos), así que cualquier hosting gratuito sirve.
+Usa rutas con `#` (`/#/plantas`), por lo que no hace falta configurar
+redirecciones.
+
+### Opción 1: Netlify (recomendada)
+
+1. Entra en [app.netlify.com](https://app.netlify.com) con tu cuenta de GitHub.
+2. **Add new site → Import an existing project → GitHub** y elige `plant-care`.
+3. Netlify lee `netlify.toml` (build `npm run build`, carpeta `dist`). Pulsa **Deploy**.
+4. En un minuto tendrás una dirección tipo `https://nombre.netlify.app`. Cada
+   cambio en `main` se publica solo.
+
+### Opción 2: Vercel
+
+1. Entra en [vercel.com](https://vercel.com) con tu cuenta de GitHub.
+2. **Add New → Project**, importa `plant-care` y pulsa **Deploy** (detecta Vite solo).
+
+### Opción 3: GitHub Pages
+
+1. En el repositorio: **Settings → Pages → Source: GitHub Actions**.
+2. **Actions → Publicar en GitHub Pages → Run workflow**.
+3. Quedará en `https://<tu-usuario>.github.io/plant-care/`.
+
+> Con un repositorio privado, GitHub Pages necesita un plan de pago; Netlify y
+> Vercel funcionan gratis también con repositorios privados.
+
+### Instalarla en el móvil
+
+Abre la dirección publicada y:
+
+- **Android (Chrome):** en la app, Ajustes → *Instalar Mis Plantas*, o menú ⋮ → *Instalar aplicación*.
+- **iPhone (Safari):** Compartir → *Añadir a pantalla de inicio*. Es necesario
+  para recibir avisos (iOS 16.4 o posterior).
 
 ## Stack
 
 React 19 + Vite + TypeScript · Tailwind CSS v4 · Dexie (IndexedDB) ·
-React Router · Vitest · lucide-react (iconos).
+React Router · vite-plugin-pwa + Workbox · Vitest · lucide-react (iconos).
 
 ## Estructura
 
@@ -28,11 +89,18 @@ React Router · Vitest · lucide-react (iconos).
 src/
 ├── types/        modelo de datos (Plant, Species, WateringEvent, DiagnosisRecord, Settings)
 ├── db/           base de datos Dexie (esquema versionado)
-├── data/         species.json y diagnosis-rules.json
-├── lib/          lógica pura con tests (fechas, riego, diagnóstico, copia de seguridad…)
-├── hooks/        hooks de React (tema, ajustes…)
-├── components/   componentes de interfaz y layout
-└── pages/        pantallas (Hoy, Plantas, Diagnóstico, Ajustes)
+├── data/         species.json (catálogo) y diagnosis-rules.json (motor de diagnóstico)
+├── lib/          lógica pura con tests
+│   ├── watering.ts         cálculo del riego y riego adaptativo
+│   ├── diagnosis.ts        motor de reglas del diagnóstico
+│   ├── backup.ts           exportar / importar
+│   ├── dailyReminder.ts    aviso diario (app y service worker)
+│   ├── ics.ts              calendario .ics
+│   └── integrations/       Open Plantbook y diagnóstico por foto (desactivado)
+├── hooks/        hooks de React (plantas, riego, ajustes, tema…)
+├── components/   componentes de interfaz
+├── pages/        pantallas (Hoy, Plantas, Catálogo, Diagnóstico, Ajustes…)
+└── sw.ts         service worker: caché sin conexión y aviso en segundo plano
 ```
 
 ## Catálogo de especies
@@ -106,4 +174,24 @@ imagen e instrucciones para el modelo usando los ids de causa). La tarjeta
 aparece únicamente si al compilar se definen `VITE_VISION_ENDPOINT` y
 `VITE_VISION_API_KEY`.
 
-El despliegue gratuito (Netlify, Vercel o GitHub Pages) se documentará en la fase 5.
+## Sin conexión y avisos
+
+- El service worker (`src/sw.ts`) guarda la app en caché: después de la primera
+  visita funciona sin internet. Las actualizaciones se aplican solas.
+- El aviso diario de riego salta al abrir la app (o mientras está abierta) a
+  partir de la hora elegida. En Chrome para Android, con la app instalada, el
+  service worker también lo intenta en segundo plano (Periodic Background
+  Sync). Es el navegador quien decide cuándo despertarlo, así que puede llegar
+  con retraso. En iPhone y otros navegadores no existe: allí el aviso solo
+  salta al abrir la app. Para recordatorios fiables sin abrirla, exporta el
+  calendario `.ics` desde Ajustes.
+
+## Copia de seguridad
+
+**Ajustes → Copia de seguridad → Exportar mis datos** descarga un archivo
+`mis-plantas-AAAA-MM-DD.json` con plantas (fotos incluidas), riegos,
+diagnósticos, especies propias y ajustes. No incluye tu API key de Open Plantbook.
+
+Al importarlo puedes **combinar** (añade lo que falte; si una planta está en los
+dos sitios gana la edición más reciente, y repetir la importación no duplica
+nada) o **reemplazar** todo.

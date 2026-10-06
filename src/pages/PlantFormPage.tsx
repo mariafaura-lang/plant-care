@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { PageHeader } from '../components/layout/PageHeader'
 import { PhotoPicker } from '../components/plants/PhotoPicker'
 import { SpeciesPicker } from '../components/species/SpeciesPicker'
@@ -19,10 +19,11 @@ const EMPTY: PlantInput = { nickname: '', room: '', potType: 'plastico', potSize
 export function PlantFormPage() {
   const { id } = useParams()
   const [searchParams] = useSearchParams()
+  const location = useLocation()
   const existing = usePlant(id)
 
-  // `key` fuerza un formulario limpio al volver a abrir "Nueva planta" desde el propio formulario.
-  if (!id) return <PlantForm key={searchParams.toString()} initial={{ ...EMPTY, speciesId: searchParams.get('especie') ?? undefined }} />
+  // `key` (cambia en cada navegación) fuerza un formulario limpio cada vez que se abre "Nueva planta".
+  if (!id) return <PlantForm key={location.key} initial={{ ...EMPTY, speciesId: searchParams.get('especie') ?? undefined }} />
   if (existing === undefined) return null // cargando
   if (existing === null) return <PageHeader title="Planta no encontrada" back="/plantas" />
 
