@@ -1,0 +1,1044 @@
+[
+  {
+    "id": "monstera-deliciosa",
+    "commonName": "Monstera",
+    "otherNames": [
+      "costilla de Adán",
+      "monstera deliciosa"
+    ],
+    "scientificName": "Monstera deliciosa",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 14,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio: irrita boca y garganta de perros y gatos.",
+    "tip": "Riega cuando los 5 cm de arriba de la tierra estén secos. Ponle un tutor de fibra de coco para que crezcan hojas más grandes y con más cortes."
+  },
+  {
+    "id": "monstera-adansonii",
+    "commonName": "Monstera adansonii",
+    "otherNames": [
+      "monstera monkey mask",
+      "costilla de Adán pequeña"
+    ],
+    "scientificName": "Monstera adansonii",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio: irritación oral en mascotas.",
+    "tip": "Le gusta más humedad que a la monstera grande: agrúpala con otras plantas o ponla en el baño si tiene luz."
+  },
+  {
+    "id": "pothos",
+    "commonName": "Potus",
+    "otherNames": [
+      "poto",
+      "pothos",
+      "potos"
+    ],
+    "scientificName": "Epipremnum aureum",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio: irritación, babeo y vómitos.",
+    "tip": "Si las hojas nuevas salen pequeñas o pierden el variegado, necesita más luz. Aguanta bien que se te olvide algún riego."
+  },
+  {
+    "id": "filodendro-hederaceum",
+    "commonName": "Filodendro trepador",
+    "otherNames": [
+      "filodendro corazón",
+      "philodendron"
+    ],
+    "scientificName": "Philodendron hederaceum",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Pódalo por encima de un nudo para que ramifique y quede más frondoso; los esquejes enraízan fácil en agua."
+  },
+  {
+    "id": "filodendro-xanadu",
+    "commonName": "Filodendro xanadú",
+    "otherNames": [
+      "xanadu",
+      "philodendron xanadu"
+    ],
+    "scientificName": "Thaumatophyllum xanadu",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Gírala un cuarto de vuelta cada semana para que crezca simétrica."
+  },
+  {
+    "id": "sansevieria",
+    "commonName": "Sansevieria",
+    "otherNames": [
+      "lengua de suegra",
+      "espada de San Jorge",
+      "sanseviera"
+    ],
+    "scientificName": "Dracaena trifasciata",
+    "light": "media",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 32,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 30,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas: náuseas y vómitos en mascotas.",
+    "tip": "Su principal enemigo es el exceso de agua: en invierno puedes regarla una vez al mes. Tolera poca luz, pero crece más con luz."
+  },
+  {
+    "id": "zamioculca",
+    "commonName": "Zamioculca",
+    "otherNames": [
+      "zamioculcas",
+      "planta ZZ",
+      "zz"
+    ],
+    "scientificName": "Zamioculcas zamiifolia",
+    "light": "baja",
+    "humidity": "baja",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 28,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Guarda agua en sus rizomas: espera a que la tierra esté seca del todo. Ideal para rincones con poca luz."
+  },
+  {
+    "id": "ficus-lyrata",
+    "commonName": "Ficus lira",
+    "otherNames": [
+      "ficus lyrata",
+      "higuera hoja de violín"
+    ],
+    "scientificName": "Ficus lyrata",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 14,
+    "difficulty": "dificil",
+    "petToxic": true,
+    "toxicityNote": "Su savia es irritante para piel y boca.",
+    "tip": "No la cambies de sitio: los cambios de luz o las corrientes hacen que pierda hojas. Limpia las hojas con un paño húmedo."
+  },
+  {
+    "id": "ficus-elastica",
+    "commonName": "Ficus elástica",
+    "otherNames": [
+      "árbol del caucho",
+      "gomero",
+      "ficus robusta"
+    ],
+    "scientificName": "Ficus elastica",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 16,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Su savia es irritante para piel y boca.",
+    "tip": "Limpia sus hojas grandes con un paño húmedo para que respiren y brillen. Tolera algo de sol directo suave."
+  },
+  {
+    "id": "ficus-benjamina",
+    "commonName": "Ficus benjamina",
+    "otherNames": [
+      "benjamina",
+      "ficus llorón"
+    ],
+    "scientificName": "Ficus benjamina",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Su savia es irritante para piel y boca.",
+    "tip": "Es normal que suelte hojas al cambiarla de sitio: busca un lugar luminoso y déjala ahí."
+  },
+  {
+    "id": "ficus-ginseng",
+    "commonName": "Ficus ginseng",
+    "otherNames": [
+      "ficus microcarpa",
+      "bonsái ficus"
+    ],
+    "scientificName": "Ficus microcarpa",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 28,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Su savia es irritante para piel y boca.",
+    "tip": "En maceta pequeña se seca rápido: comprueba la tierra con el dedo cada pocos días en verano."
+  },
+  {
+    "id": "calathea",
+    "commonName": "Calathea",
+    "otherNames": [
+      "calatea",
+      "goeppertia",
+      "planta de la oración"
+    ],
+    "scientificName": "Goeppertia spp.",
+    "light": "media",
+    "humidity": "alta",
+    "tempMin": 18,
+    "tempMax": 27,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 9,
+    "difficulty": "dificil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Riégala con agua sin cal (filtrada o de lluvia) y mantén la tierra siempre algo húmeda; las puntas marrones suelen ser por aire seco."
+  },
+  {
+    "id": "maranta",
+    "commonName": "Maranta",
+    "otherNames": [
+      "planta de la oración",
+      "maranta leuconeura"
+    ],
+    "scientificName": "Maranta leuconeura",
+    "light": "media",
+    "humidity": "alta",
+    "tempMin": 18,
+    "tempMax": 27,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 9,
+    "difficulty": "media",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Por la noche pliega las hojas hacia arriba: es normal. Evita el sol directo, que decolora las hojas."
+  },
+  {
+    "id": "orquidea-phalaenopsis",
+    "commonName": "Orquídea Phalaenopsis",
+    "otherNames": [
+      "orquídea",
+      "falenopsis",
+      "orquídea mariposa"
+    ],
+    "scientificName": "Phalaenopsis spp.",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 18,
+    "tempMax": 29,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "media",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Riega por inmersión 10 minutos cuando las raíces se vean plateadas y deja escurrir bien. Nunca dejes agua en el centro de las hojas."
+  },
+  {
+    "id": "espatifilo",
+    "commonName": "Espatifilo",
+    "otherNames": [
+      "cuna de Moisés",
+      "lirio de la paz",
+      "espatifilio"
+    ],
+    "scientificName": "Spathiphyllum wallisii",
+    "light": "media",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 28,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 9,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Te avisa cuando tiene sed: se le caen las hojas y se recupera a las pocas horas de regarla. No dejes que llegue a ese punto a menudo."
+  },
+  {
+    "id": "anturio",
+    "commonName": "Anturio",
+    "otherNames": [
+      "anthurium",
+      "flor de flamenco"
+    ],
+    "scientificName": "Anthurium andraeanum",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 10,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Para que florezca necesita mucha luz indirecta. Usa un sustrato aireado (con corteza) y deja secar la capa superior entre riegos."
+  },
+  {
+    "id": "aglaonema",
+    "commonName": "Aglaonema",
+    "otherNames": [
+      "aglonema",
+      "café de salón"
+    ],
+    "scientificName": "Aglaonema spp.",
+    "light": "baja",
+    "humidity": "media",
+    "tempMin": 18,
+    "tempMax": 30,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 14,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Una de las mejores para poca luz. No le gusta el frío: aléjala de ventanas en invierno."
+  },
+  {
+    "id": "dieffenbachia",
+    "commonName": "Dieffenbachia",
+    "otherNames": [
+      "difenbaquia",
+      "galatea"
+    ],
+    "scientificName": "Dieffenbachia seguine",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Muy irritante: hinchazón de boca y lengua. Ojo con niños y mascotas.",
+    "tip": "Gírala a menudo porque se inclina hacia la luz. Lávate las manos tras podarla."
+  },
+  {
+    "id": "alocasia",
+    "commonName": "Alocasia",
+    "otherNames": [
+      "oreja de elefante",
+      "alocasia amazónica"
+    ],
+    "scientificName": "Alocasia × amazonica",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 18,
+    "tempMax": 29,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "dificil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "En invierno puede entrar en reposo y perder hojas: reduce el riego y no la des por muerta, el bulbo rebrota en primavera."
+  },
+  {
+    "id": "singonio",
+    "commonName": "Singonio",
+    "otherNames": [
+      "syngonium",
+      "singonium",
+      "punta de flecha"
+    ],
+    "scientificName": "Syngonium podophyllum",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio.",
+    "tip": "Si quieres que siga compacta, pódale las guías trepadoras. Agradece pulverizaciones en verano."
+  },
+  {
+    "id": "dracaena-marginata",
+    "commonName": "Drácena marginata",
+    "otherNames": [
+      "dracena",
+      "drácena de Madagascar"
+    ],
+    "scientificName": "Dracaena marginata",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 10,
+    "waterDaysWinter": 18,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas: vómitos y babeo.",
+    "tip": "Es sensible al flúor y la cal del grifo: si se le queman las puntas, riega con agua filtrada o reposada."
+  },
+  {
+    "id": "dracaena-fragrans",
+    "commonName": "Palo de Brasil",
+    "otherNames": [
+      "tronco de Brasil",
+      "drácena fragrans",
+      "palo de agua"
+    ],
+    "scientificName": "Dracaena fragrans",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 30,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 15,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas: vómitos y babeo.",
+    "tip": "Riega cuando la mitad superior de la tierra esté seca; el tronco no necesita agua, solo la tierra."
+  },
+  {
+    "id": "bambu-de-la-suerte",
+    "commonName": "Bambú de la suerte",
+    "otherNames": [
+      "lucky bamboo",
+      "dracaena sanderiana"
+    ],
+    "scientificName": "Dracaena sanderiana",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 18,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 10,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas: vómitos y babeo.",
+    "tip": "Si vive en agua, cámbiala cada 1-2 semanas y que cubra solo las raíces. El riego indicado es para cuando está en tierra."
+  },
+  {
+    "id": "palmera-de-salon",
+    "commonName": "Palmera de salón",
+    "otherNames": [
+      "camedor",
+      "chamaedorea",
+      "pacaya"
+    ],
+    "scientificName": "Chamaedorea elegans",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 16,
+    "tempMax": 28,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Tolera poca luz. Si ves telarañas finas entre las hojas, revisa si tiene araña roja y sube la humedad."
+  },
+  {
+    "id": "kentia",
+    "commonName": "Kentia",
+    "otherNames": [
+      "palmera kentia",
+      "howea"
+    ],
+    "scientificName": "Howea forsteriana",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 12,
+    "tempMax": 28,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 14,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Crece despacio y odia los trasplantes: cámbiala de maceta solo cuando las raíces asomen por abajo."
+  },
+  {
+    "id": "areca",
+    "commonName": "Areca",
+    "otherNames": [
+      "palmera areca",
+      "palmera bambú",
+      "dypsis"
+    ],
+    "scientificName": "Dypsis lutescens",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 10,
+    "difficulty": "media",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Necesita mucha luz y humedad; en casas con calefacción, pulveriza o usa un humidificador cerca."
+  },
+  {
+    "id": "cinta",
+    "commonName": "Cinta",
+    "otherNames": [
+      "malamadre",
+      "lazo de amor",
+      "chlorophytum"
+    ],
+    "scientificName": "Chlorophytum comosum",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 10,
+    "tempMax": 30,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica (ASPCA), aunque a los gatos les encanta mordisquearla.",
+    "tip": "Los hijuelos que cuelgan se pueden plantar directamente en tierra. Las puntas marrones suelen ser por cal o flúor del agua."
+  },
+  {
+    "id": "helecho-boston",
+    "commonName": "Helecho de Boston",
+    "otherNames": [
+      "helecho",
+      "nefrolepis"
+    ],
+    "scientificName": "Nephrolepis exaltata",
+    "light": "media",
+    "humidity": "alta",
+    "tempMin": 15,
+    "tempMax": 26,
+    "waterDaysSummer": 3,
+    "waterDaysWinter": 6,
+    "difficulty": "media",
+    "petToxic": false,
+    "toxicityNote": "No tóxico para perros y gatos (ASPCA).",
+    "tip": "No dejes nunca que la tierra se seque del todo. Queda muy bien colgado en un baño luminoso."
+  },
+  {
+    "id": "helecho-esparrago",
+    "commonName": "Esparraguera",
+    "otherNames": [
+      "helecho espárrago",
+      "asparagus"
+    ],
+    "scientificName": "Asparagus setaceus",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 13,
+    "tempMax": 27,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 9,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Sus bayas son tóxicas y la planta puede irritar la piel.",
+    "tip": "Si amarillea por dentro, suele ser falta de luz. Pódale las ramas secas desde la base."
+  },
+  {
+    "id": "peperomia",
+    "commonName": "Peperomia",
+    "otherNames": [
+      "peperomia obtusifolia",
+      "planta del caucho bebé"
+    ],
+    "scientificName": "Peperomia obtusifolia",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 16,
+    "tempMax": 27,
+    "waterDaysSummer": 9,
+    "waterDaysWinter": 16,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Sus hojas carnosas guardan agua: mejor quedarse corto que pasarse con el riego."
+  },
+  {
+    "id": "pilea",
+    "commonName": "Pilea",
+    "otherNames": [
+      "planta china del dinero",
+      "planta de las monedas",
+      "pilea peperomioides"
+    ],
+    "scientificName": "Pilea peperomioides",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 12,
+    "tempMax": 28,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Gírala cada semana para que no crezca torcida hacia la ventana. Los hijuelos de la base se pueden separar y regalar."
+  },
+  {
+    "id": "hiedra",
+    "commonName": "Hiedra",
+    "otherNames": [
+      "hedera",
+      "hiedra común"
+    ],
+    "scientificName": "Hedera helix",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 8,
+    "tempMax": 24,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 10,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas: vómitos, diarrea e irritación.",
+    "tip": "Prefiere sitios frescos; con calor y aire seco le sale araña roja. Dúchala de vez en cuando."
+  },
+  {
+    "id": "ceropegia",
+    "commonName": "Collar de corazones",
+    "otherNames": [
+      "ceropegia",
+      "rosario de corazones"
+    ],
+    "scientificName": "Ceropegia woodii",
+    "light": "indirecta-brillante",
+    "humidity": "baja",
+    "tempMin": 12,
+    "tempMax": 30,
+    "waterDaysSummer": 12,
+    "waterDaysWinter": 24,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Planta colgante semisuculenta: espera a que la tierra se seque del todo. Con más luz, las hojas se vuelven más marcadas."
+  },
+  {
+    "id": "collar-de-perlas",
+    "commonName": "Collar de perlas",
+    "otherNames": [
+      "rosario",
+      "senecio rowleyanus",
+      "senecio"
+    ],
+    "scientificName": "Curio rowleyanus",
+    "light": "indirecta-brillante",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 28,
+    "waterDaysSummer": 12,
+    "waterDaysWinter": 24,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Puede causar vómitos e irritación.",
+    "tip": "Si las perlas se arrugan, tiene sed; si se ablandan y se vuelven translúcidas, exceso de agua. Usa maceta de barro."
+  },
+  {
+    "id": "tradescantia",
+    "commonName": "Tradescantia",
+    "otherNames": [
+      "amor de hombre",
+      "oreja de gato",
+      "tradescantia zebrina"
+    ],
+    "scientificName": "Tradescantia zebrina",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 12,
+    "tempMax": 28,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Su savia puede irritar la piel de perros y gatos.",
+    "tip": "Pellizca las puntas para que quede tupida. Con poca luz pierde el color morado."
+  },
+  {
+    "id": "schefflera",
+    "commonName": "Cheflera",
+    "otherNames": [
+      "schefflera",
+      "árbol paraguas"
+    ],
+    "scientificName": "Heptapleurum arboricola",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 13,
+    "tempMax": 29,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 14,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene oxalatos de calcio y saponinas.",
+    "tip": "Si se estira y pierde hojas de abajo, necesita más luz. Se puede podar para darle forma."
+  },
+  {
+    "id": "croton",
+    "commonName": "Crotón",
+    "otherNames": [
+      "croto",
+      "codiaeum"
+    ],
+    "scientificName": "Codiaeum variegatum",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 10,
+    "difficulty": "dificil",
+    "petToxic": true,
+    "toxicityNote": "Su savia es irritante y puede causar vómitos.",
+    "tip": "Necesita mucha luz para mantener sus colores y no tolera cambios de sitio ni corrientes de aire."
+  },
+  {
+    "id": "begonia-maculata",
+    "commonName": "Begonia maculata",
+    "otherNames": [
+      "begonia de lunares",
+      "begonia"
+    ],
+    "scientificName": "Begonia maculata",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 16,
+    "tempMax": 26,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 12,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Sus tubérculos y raíces son tóxicos.",
+    "tip": "Necesita humedad ambiental pero no pulverices las hojas: favorece hongos. Mejor una bandeja con piedras y agua."
+  },
+  {
+    "id": "ave-del-paraiso",
+    "commonName": "Ave del paraíso",
+    "otherNames": [
+      "strelitzia",
+      "estrelitzia"
+    ],
+    "scientificName": "Strelitzia reginae",
+    "light": "sol-directo",
+    "humidity": "media",
+    "tempMin": 12,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 14,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Puede causar molestias digestivas leves.",
+    "tip": "Necesita mucha luz, mejor junto a la ventana más soleada. Que las hojas se rajen es normal."
+  },
+  {
+    "id": "hoya",
+    "commonName": "Hoya",
+    "otherNames": [
+      "flor de cera",
+      "hoya carnosa"
+    ],
+    "scientificName": "Hoya carnosa",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 12,
+    "tempMax": 30,
+    "waterDaysSummer": 10,
+    "waterDaysWinter": 20,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "No cortes los tallos que quedan tras la floración: vuelve a florecer en ellos. Le gusta estar algo apretada en la maceta."
+  },
+  {
+    "id": "fitonia",
+    "commonName": "Fitonia",
+    "otherNames": [
+      "planta mosaico",
+      "fittonia"
+    ],
+    "scientificName": "Fittonia albivenis",
+    "light": "media",
+    "humidity": "alta",
+    "tempMin": 18,
+    "tempMax": 27,
+    "waterDaysSummer": 3,
+    "waterDaysWinter": 6,
+    "difficulty": "media",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Se desmaya en cuanto se seca, pero revive tras regarla. Ideal para terrarios por la humedad."
+  },
+  {
+    "id": "tillandsia",
+    "commonName": "Clavel del aire",
+    "otherNames": [
+      "tillandsia",
+      "planta de aire"
+    ],
+    "scientificName": "Tillandsia spp.",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 10,
+    "tempMax": 30,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 10,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "No necesita tierra: báñala 20-30 minutos en agua sin cal y déjala secar boca abajo antes de volver a su sitio."
+  },
+  {
+    "id": "bromelia",
+    "commonName": "Bromelia",
+    "otherNames": [
+      "guzmania",
+      "bromelia guzmania"
+    ],
+    "scientificName": "Guzmania lingulata",
+    "light": "indirecta-brillante",
+    "humidity": "alta",
+    "tempMin": 15,
+    "tempMax": 27,
+    "waterDaysSummer": 7,
+    "waterDaysWinter": 12,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Mantén un poco de agua en el vaso central de las hojas y renuévala cada semana. Tras florecer, la madre muere y deja hijuelos."
+  },
+  {
+    "id": "ciclamen",
+    "commonName": "Ciclamen",
+    "otherNames": [
+      "violeta de los Alpes",
+      "cyclamen"
+    ],
+    "scientificName": "Cyclamen persicum",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 10,
+    "tempMax": 20,
+    "waterDaysSummer": 5,
+    "waterDaysWinter": 7,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Su tubérculo es muy tóxico: vómitos y problemas cardíacos.",
+    "tip": "Florece en invierno y quiere fresco (10-18 ºC). Riega por abajo, sin mojar el centro del tubérculo."
+  },
+  {
+    "id": "flor-de-pascua",
+    "commonName": "Flor de Pascua",
+    "otherNames": [
+      "poinsettia",
+      "pascuero"
+    ],
+    "scientificName": "Euphorbia pulcherrima",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 15,
+    "tempMax": 24,
+    "waterDaysSummer": 6,
+    "waterDaysWinter": 8,
+    "difficulty": "media",
+    "petToxic": true,
+    "toxicityNote": "Su savia irrita boca y estómago (toxicidad leve).",
+    "tip": "Evita las corrientes de aire y los radiadores. Riega cuando la superficie esté seca y nunca dejes agua en el plato."
+  },
+  {
+    "id": "kalanchoe",
+    "commonName": "Kalanchoe",
+    "otherNames": [
+      "calanchoe",
+      "kalanchoe blossfeldiana"
+    ],
+    "scientificName": "Kalanchoe blossfeldiana",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 29,
+    "waterDaysSummer": 10,
+    "waterDaysWinter": 20,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene bufadienólidos: vómitos y problemas cardíacos.",
+    "tip": "Para que vuelva a florecer necesita noches largas (unas 14 h de oscuridad) durante 6 semanas en otoño."
+  },
+  {
+    "id": "cactus",
+    "commonName": "Cactus",
+    "otherNames": [
+      "cacto",
+      "cactácea"
+    ],
+    "scientificName": "Cactaceae",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 5,
+    "tempMax": 35,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 35,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxico en general, pero sus espinas pueden herir a las mascotas.",
+    "tip": "En invierno apenas lo riegues (o nada) y tenlo fresco: así florece en primavera. Usa sustrato para cactus muy drenante."
+  },
+  {
+    "id": "suculentas",
+    "commonName": "Suculentas",
+    "otherNames": [
+      "echeveria",
+      "crasas",
+      "rosetas"
+    ],
+    "scientificName": "Echeveria spp.",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 32,
+    "waterDaysSummer": 10,
+    "waterDaysWinter": 25,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "Las echeverias no son tóxicas (ASPCA). Otras suculentas sí pueden serlo.",
+    "tip": "Riega a fondo y espera a que la tierra esté totalmente seca. Si se alargan y abren, necesitan más sol."
+  },
+  {
+    "id": "aloe-vera",
+    "commonName": "Aloe vera",
+    "otherNames": [
+      "aloe",
+      "sábila"
+    ],
+    "scientificName": "Aloe vera",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 32,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 30,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene saponinas y antraquinonas: vómitos y diarrea.",
+    "tip": "Riega poco y siempre sobre tierra seca. Si las hojas se ponen planas y finas, tiene sed; si se ablandan, sobra agua."
+  },
+  {
+    "id": "arbol-de-jade",
+    "commonName": "Árbol de jade",
+    "otherNames": [
+      "crásula",
+      "planta del dinero",
+      "crassula"
+    ],
+    "scientificName": "Crassula ovata",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 30,
+    "waterDaysSummer": 12,
+    "waterDaysWinter": 25,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Puede causar vómitos y letargo.",
+    "tip": "Con unas horas de sol directo los bordes de las hojas se vuelven rojizos. Es muy fácil de multiplicar por hoja."
+  },
+  {
+    "id": "haworthia",
+    "commonName": "Haworthia",
+    "otherNames": [
+      "haworthiopsis",
+      "planta cebra"
+    ],
+    "scientificName": "Haworthiopsis attenuata",
+    "light": "indirecta-brillante",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 30,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 28,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Una suculenta que no necesita sol directo: perfecta para una ventana con luz indirecta."
+  },
+  {
+    "id": "pata-de-elefante",
+    "commonName": "Pata de elefante",
+    "otherNames": [
+      "nolina",
+      "beaucarnea"
+    ],
+    "scientificName": "Beaucarnea recurvata",
+    "light": "sol-directo",
+    "humidity": "baja",
+    "tempMin": 10,
+    "tempMax": 32,
+    "waterDaysSummer": 14,
+    "waterDaysWinter": 30,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "Guarda agua en su base abultada: riega solo cuando la tierra esté completamente seca."
+  },
+  {
+    "id": "clivia",
+    "commonName": "Clivia",
+    "otherNames": [
+      "clivia miniata"
+    ],
+    "scientificName": "Clivia miniata",
+    "light": "media",
+    "humidity": "media",
+    "tempMin": 10,
+    "tempMax": 25,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 20,
+    "difficulty": "facil",
+    "petToxic": true,
+    "toxicityNote": "Contiene alcaloides: vómitos y diarrea.",
+    "tip": "Para que florezca, dale un invierno fresco (10-12 ºC) y casi sin riego durante 6-8 semanas."
+  },
+  {
+    "id": "pachira",
+    "commonName": "Pachira",
+    "otherNames": [
+      "árbol del dinero",
+      "castaño de Guayana"
+    ],
+    "scientificName": "Pachira aquatica",
+    "light": "indirecta-brillante",
+    "humidity": "media",
+    "tempMin": 16,
+    "tempMax": 29,
+    "waterDaysSummer": 8,
+    "waterDaysWinter": 16,
+    "difficulty": "facil",
+    "petToxic": false,
+    "toxicityNote": "No tóxica para perros y gatos (ASPCA).",
+    "tip": "No la riegues en exceso aunque se llame 'aquatica': el tronco trenzado se pudre con facilidad."
+  }
+]

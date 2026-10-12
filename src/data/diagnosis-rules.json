@@ -1,0 +1,1788 @@
+{
+  "version": 1,
+  "symptoms": [
+    {
+      "id": "hojas-amarillas",
+      "label": "Hojas amarillas",
+      "description": "Hojas que amarillean, enteras o por partes"
+    },
+    {
+      "id": "puntas-marrones",
+      "label": "Puntas o bordes marrones",
+      "description": "Puntas o bordes secos y marrones"
+    },
+    {
+      "id": "manchas",
+      "label": "Manchas en las hojas",
+      "description": "Manchas marrones, claras, plateadas o polvo"
+    },
+    {
+      "id": "hojas-caidas",
+      "label": "Hojas mustias o caídas",
+      "description": "Cuelgan sin fuerza, como desmayadas"
+    },
+    {
+      "id": "caida-hojas",
+      "label": "Se le caen las hojas",
+      "description": "Pierde hojas, aunque estén verdes"
+    },
+    {
+      "id": "hojas-blandas",
+      "label": "Hojas o tallos blandos",
+      "description": "Blandos, translúcidos o encharcados al tacto"
+    },
+    {
+      "id": "tallo-podrido",
+      "label": "Base del tallo podrida",
+      "description": "Base del tallo negra, blanda o con mal olor"
+    },
+    {
+      "id": "bichos",
+      "label": "Bichos visibles",
+      "description": "Insectos en hojas, tallos o tierra"
+    },
+    {
+      "id": "telaranas",
+      "label": "Telarañas finas",
+      "description": "Telarañas muy finas entre hojas y tallos"
+    },
+    {
+      "id": "hojas-pegajosas",
+      "label": "Hojas pegajosas",
+      "description": "Pegajosas o con una capa negra como hollín"
+    },
+    {
+      "id": "hojas-enrolladas",
+      "label": "Hojas enrolladas o rizadas",
+      "description": "Se enrollan, rizan o deforman"
+    },
+    {
+      "id": "hojas-palidas",
+      "label": "Hojas pálidas o descoloridas",
+      "description": "Pierden el color o el variegado"
+    },
+    {
+      "id": "hojas-arrugadas",
+      "label": "Hojas arrugadas o finas",
+      "description": "Típico de suculentas: hojas planas o arrugadas"
+    },
+    {
+      "id": "crecimiento-lento",
+      "label": "Crece poco o nada",
+      "description": "Hace meses que no saca hojas nuevas"
+    },
+    {
+      "id": "crecimiento-estirado",
+      "label": "Tallos largos y estirados",
+      "description": "Hojas pequeñas y separadas, se inclina hacia la luz"
+    },
+    {
+      "id": "moho-tierra",
+      "label": "Moho o mal olor en la tierra",
+      "description": "Capa blanca, verdosa o olor a podrido"
+    },
+    {
+      "id": "raices-fuera",
+      "label": "Raíces fuera de la maceta",
+      "description": "Salen por los agujeros o por arriba"
+    },
+    {
+      "id": "costra-blanca",
+      "label": "Costra blanca en la tierra",
+      "description": "Costra blanca en la tierra o el borde de la maceta"
+    }
+  ],
+  "questions": [
+    {
+      "id": "que-hojas",
+      "text": "¿Qué hojas amarillean?",
+      "showIfSymptoms": [
+        "hojas-amarillas"
+      ],
+      "options": [
+        {
+          "id": "viejas",
+          "label": "Las de abajo, las más viejas"
+        },
+        {
+          "id": "nuevas",
+          "label": "Las nuevas, las de arriba"
+        },
+        {
+          "id": "todas",
+          "label": "Por toda la planta"
+        }
+      ]
+    },
+    {
+      "id": "tipo-manchas",
+      "text": "¿Cómo son las manchas?",
+      "showIfSymptoms": [
+        "manchas"
+      ],
+      "options": [
+        {
+          "id": "oscuras-halo",
+          "label": "Marrones u oscuras, blandas o con borde amarillo"
+        },
+        {
+          "id": "secas-claras",
+          "label": "Secas, claras o color paja, en la cara que da a la ventana"
+        },
+        {
+          "id": "punteado",
+          "label": "Muchos puntitos pálidos, como si estuviera espolvoreada"
+        },
+        {
+          "id": "plateadas",
+          "label": "Zonas plateadas con puntitos negros"
+        },
+        {
+          "id": "polvo-blanco",
+          "label": "Polvillo blanco que se quita con el dedo"
+        }
+      ]
+    },
+    {
+      "id": "tipo-bichos",
+      "text": "¿Cómo son los bichos?",
+      "showIfSymptoms": [
+        "bichos"
+      ],
+      "options": [
+        {
+          "id": "algodon",
+          "label": "Bolitas blancas como algodón"
+        },
+        {
+          "id": "escamas",
+          "label": "Escamas marrones pegadas a tallos u hojas"
+        },
+        {
+          "id": "puntitos",
+          "label": "Puntitos diminutos rojizos o claros, a veces con telaraña"
+        },
+        {
+          "id": "alargados",
+          "label": "Alargados y diminutos, negros o amarillentos"
+        },
+        {
+          "id": "verdes",
+          "label": "Verdes, negros o amarillos, agrupados en los brotes"
+        },
+        {
+          "id": "mosquitas",
+          "label": "Mosquitas negras que vuelan sobre la tierra"
+        }
+      ]
+    },
+    {
+      "id": "tierra",
+      "text": "Mete un dedo 2-3 cm en la tierra. ¿Cómo está?",
+      "options": [
+        {
+          "id": "empapada",
+          "label": "Empapada o encharcada"
+        },
+        {
+          "id": "humeda",
+          "label": "Húmeda"
+        },
+        {
+          "id": "seca",
+          "label": "Seca"
+        },
+        {
+          "id": "muy-seca",
+          "label": "Muy seca, se despega de la maceta"
+        }
+      ]
+    },
+    {
+      "id": "luz",
+      "text": "¿Cuánta luz recibe?",
+      "options": [
+        {
+          "id": "poca",
+          "label": "Poca: lejos de la ventana o en un pasillo"
+        },
+        {
+          "id": "media",
+          "label": "Media: a unos metros de la ventana"
+        },
+        {
+          "id": "mucha-indirecta",
+          "label": "Mucha, pero sin sol directo"
+        },
+        {
+          "id": "sol-directo",
+          "label": "Le da el sol directo"
+        }
+      ]
+    },
+    {
+      "id": "cambio",
+      "text": "¿La has cambiado de sitio, trasplantado o comprado en las últimas 3 semanas?",
+      "options": [
+        {
+          "id": "si",
+          "label": "Sí"
+        },
+        {
+          "id": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "id": "insectos",
+      "text": "Mira el envés de las hojas con atención. ¿Ves insectos o telarañas?",
+      "hideIfSymptoms": [
+        "bichos",
+        "telaranas"
+      ],
+      "options": [
+        {
+          "id": "si",
+          "label": "Sí"
+        },
+        {
+          "id": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "id": "plato",
+      "text": "¿Queda agua en el plato o en el cubremacetas después de regar?",
+      "options": [
+        {
+          "id": "si",
+          "label": "Sí"
+        },
+        {
+          "id": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "id": "ambiente",
+      "text": "¿Dónde está?",
+      "options": [
+        {
+          "id": "calefaccion",
+          "label": "Cerca de calefacción, estufa o aire acondicionado"
+        },
+        {
+          "id": "corriente",
+          "label": "Junto a una puerta o ventana que se abre, o pegada a un cristal frío"
+        },
+        {
+          "id": "normal",
+          "label": "Ninguna de las dos"
+        }
+      ]
+    },
+    {
+      "id": "abono",
+      "text": "¿Cuándo la abonaste por última vez?",
+      "options": [
+        {
+          "id": "nunca",
+          "label": "Nunca o hace más de 6 meses"
+        },
+        {
+          "id": "reciente",
+          "label": "En los últimos meses"
+        },
+        {
+          "id": "mucho",
+          "label": "A menudo o con dosis fuertes"
+        }
+      ]
+    },
+    {
+      "id": "trasplante",
+      "text": "¿Cuánto hace que no la trasplantas?",
+      "options": [
+        {
+          "id": "menos-1",
+          "label": "Menos de 1 año"
+        },
+        {
+          "id": "1-2",
+          "label": "Entre 1 y 2 años"
+        },
+        {
+          "id": "mas-2",
+          "label": "Más de 2 años o nunca"
+        }
+      ]
+    },
+    {
+      "id": "especie-humedad",
+      "text": "Humedad que necesita la especie",
+      "derived": true,
+      "options": [
+        {
+          "id": "baja",
+          "label": "Baja"
+        },
+        {
+          "id": "media",
+          "label": "Media"
+        },
+        {
+          "id": "alta",
+          "label": "Alta"
+        }
+      ]
+    },
+    {
+      "id": "especie-luz",
+      "text": "Luz que necesita la especie",
+      "derived": true,
+      "options": [
+        {
+          "id": "baja",
+          "label": "Baja"
+        },
+        {
+          "id": "media",
+          "label": "Media"
+        },
+        {
+          "id": "indirecta-brillante",
+          "label": "Indirecta brillante"
+        },
+        {
+          "id": "sol-directo",
+          "label": "Sol directo"
+        }
+      ]
+    },
+    {
+      "id": "estado-riego",
+      "text": "Estado del riego según la app",
+      "derived": true,
+      "options": [
+        {
+          "id": "atrasada",
+          "label": "Riego atrasado"
+        },
+        {
+          "id": "al-dia",
+          "label": "Al día"
+        }
+      ]
+    }
+  ],
+  "causes": [
+    {
+      "id": "exceso-riego",
+      "name": "Exceso de riego",
+      "category": "riego",
+      "summary": "La tierra pasa demasiado tiempo encharcada y las raíces no pueden respirar. Es la causa más habitual de problemas en plantas de interior.",
+      "urgency": "media",
+      "treatment": [
+        "Deja de regar hasta que los 3-5 cm de arriba de la tierra estén secos (en suculentas y cactus, la tierra entera).",
+        "Vacía el agua que quede en el plato o el cubremacetas 15 minutos después de regar.",
+        "Comprueba que la maceta tiene agujeros de drenaje. Si no los tiene, trasplántala a una que sí.",
+        "Si la tierra huele mal o ves raíces marrones y blandas, sigue los pasos de «Raíces podridas».",
+        "Retira las hojas totalmente amarillas: no se vuelven a poner verdes."
+      ],
+      "prevention": "Riega según cómo esté la tierra y no por costumbre: si sigue húmeda, usa «Más tarde» en la app."
+    },
+    {
+      "id": "pudricion-raices",
+      "name": "Raíces podridas",
+      "category": "riego",
+      "summary": "Las raíces se han podrido por exceso de agua o mal drenaje. Es urgente: si llega al tallo, la planta muere.",
+      "urgency": "alta",
+      "treatment": [
+        "Saca la planta de la maceta y quita la tierra de las raíces con cuidado.",
+        "Corta con tijeras desinfectadas (con alcohol) todas las raíces marrones, blandas o que huelan mal. Las sanas son firmes y claras.",
+        "Si la base del tallo está podrida, corta esquejes de la parte sana y ponlos a enraizar en agua para salvar la planta.",
+        "Trasplanta a tierra nueva y suelta (mezclada con perlita) en una maceta limpia con agujeros.",
+        "Espera 5-7 días antes de volver a regar y después riega con moderación."
+      ],
+      "prevention": "Usa macetas con agujeros, sustrato aireado y no dejes agua en el plato."
+    },
+    {
+      "id": "falta-riego",
+      "name": "Falta de riego",
+      "category": "riego",
+      "summary": "La planta pasa demasiado tiempo con la tierra seca y no le llega agua suficiente.",
+      "urgency": "media",
+      "treatment": [
+        "Riega a fondo, hasta que el agua salga por los agujeros de la maceta.",
+        "Si la tierra está tan seca que se despega de la maceta y el agua se escurre por los lados, sumerge la maceta en un cubo de agua 20-30 minutos y deja escurrir.",
+        "Las hojas mustias suelen recuperarse en unas horas; corta las que estén totalmente secas.",
+        "Revisa su ritmo de riego en la app y activa los avisos si se te pasa a menudo."
+      ],
+      "prevention": "Las macetas de barro, las pequeñas y las que están en sitios muy luminosos se secan antes: revísalas más a menudo en verano."
+    },
+    {
+      "id": "poca-luz",
+      "name": "Poca luz",
+      "category": "luz",
+      "summary": "No recibe luz suficiente para crecer bien: se estira buscando la ventana, pierde color y crece despacio.",
+      "urgency": "media",
+      "treatment": [
+        "Acércala a una ventana luminosa (a 1-2 metros). Si no es planta de sol, evita el sol fuerte del mediodía.",
+        "Gírala un cuarto de vuelta cada semana para que crezca recta.",
+        "Riega menos mientras tenga poca luz: con menos luz consume menos agua.",
+        "Si no tienes un sitio más luminoso, una bombilla LED de cultivo de espectro completo ayuda mucho.",
+        "Puedes podar los tallos estirados para que rebrote más compacta."
+      ],
+      "prevention": "Antes de comprar una planta, mira en su ficha la luz que necesita y elige según el sitio que tienes."
+    },
+    {
+      "id": "sol-directo",
+      "name": "Quemaduras por sol",
+      "category": "luz",
+      "summary": "El sol directo, sobre todo a través del cristal, ha quemado las hojas.",
+      "urgency": "media",
+      "treatment": [
+        "Apártala de la ventana o pon una cortina fina para filtrar el sol directo.",
+        "Corta las partes quemadas si te molestan: no vuelven a ponerse verdes.",
+        "Si quieres acostumbrarla al sol (suculentas, cactus), hazlo poco a poco a lo largo de 2-3 semanas.",
+        "Con más sol y calor la tierra se seca antes: vigila el riego."
+      ],
+      "prevention": "En verano, el sol de la tarde a través del cristal quema incluso a plantas que lo toleran el resto del año."
+    },
+    {
+      "id": "humedad-baja",
+      "name": "Ambiente demasiado seco",
+      "category": "ambiente",
+      "summary": "El aire de casa es muy seco para esta planta, sobre todo con calefacción o aire acondicionado.",
+      "urgency": "media",
+      "treatment": [
+        "Apártala de radiadores, estufas y salidas del aire acondicionado.",
+        "Agrúpala con otras plantas: juntas crean un ambiente más húmedo.",
+        "Pon la maceta sobre un plato con piedras y agua, sin que el fondo toque el agua.",
+        "Si es muy exigente (calathea, helechos, alocasia…), un humidificador cerca marca la diferencia.",
+        "Recorta las puntas secas con tijeras limpias siguiendo la forma de la hoja."
+      ],
+      "prevention": "Pulverizar las hojas ayuda poco y solo un rato; es mejor agrupar plantas o usar un humidificador."
+    },
+    {
+      "id": "cal-sales",
+      "name": "Cal o exceso de sales",
+      "category": "riego",
+      "summary": "El agua muy dura o el exceso de abono acumulan sales en la tierra, que queman las raíces y las puntas de las hojas.",
+      "urgency": "media",
+      "treatment": [
+        "Lava la tierra: riega abundantemente 2-3 veces seguidas, dejando escurrir toda el agua.",
+        "Retira la costra blanca de la superficie y añade tierra nueva.",
+        "Si tu agua es muy dura, riega con agua filtrada, de lluvia o reposada 24 horas.",
+        "Reduce la dosis de abono."
+      ],
+      "prevention": "Las calatheas, las drácenas y la cinta son especialmente sensibles a la cal y al flúor del agua del grifo."
+    },
+    {
+      "id": "cochinilla",
+      "name": "Cochinilla",
+      "category": "plaga",
+      "summary": "Insectos chupadores que parecen bolitas de algodón blanco o pequeñas escamas marrones pegadas a tallos y envés. Debilitan la planta y dejan las hojas pegajosas.",
+      "urgency": "alta",
+      "treatment": [
+        "Aísla la planta de las demás para que no se extienda.",
+        "Retira las cochinillas que veas con un bastoncillo mojado en alcohol de farmacia.",
+        "Lava la planta con agua tibia y jabón potásico (unos 15 ml por litro), insistiendo en el envés y en las axilas de las hojas.",
+        "Repite cada 7 días durante al menos 3-4 semanas: los huevos eclosionan después.",
+        "Si vuelve a aparecer, alterna el jabón potásico con aceite de neem (sigue las instrucciones del envase)."
+      ],
+      "prevention": "Revisa bien las plantas nuevas antes de juntarlas con las demás."
+    },
+    {
+      "id": "arana-roja",
+      "name": "Araña roja",
+      "category": "plaga",
+      "summary": "Ácaros diminutos que dejan muchos puntitos pálidos en las hojas y telarañas muy finas. Aparecen con calor y aire seco.",
+      "urgency": "alta",
+      "treatment": [
+        "Aísla la planta.",
+        "Dúchala a fondo con agua tibia, sobre todo por el envés, para arrastrar los ácaros y las telarañas.",
+        "Aplica jabón potásico o aceite de neem cada 5-7 días durante 3-4 semanas.",
+        "Sube la humedad del ambiente: a la araña roja no le gusta la humedad.",
+        "Retira las hojas muy dañadas."
+      ],
+      "prevention": "Mantén una humedad razonable en verano y con la calefacción encendida."
+    },
+    {
+      "id": "trips",
+      "name": "Trips",
+      "category": "plaga",
+      "summary": "Insectos alargados y diminutos (negros o amarillentos) que raspan las hojas y dejan zonas plateadas con puntitos negros.",
+      "urgency": "alta",
+      "treatment": [
+        "Aísla la planta.",
+        "Dúchala a fondo, hoja por hoja, por las dos caras.",
+        "Alterna jabón potásico y aceite de neem cada 5 días durante un mes.",
+        "Pon trampas adhesivas azules o amarillas cerca para atrapar a los adultos.",
+        "Cambia la capa de arriba de la tierra: las larvas pasan una fase en el sustrato."
+      ],
+      "prevention": "Revisa el envés de las hojas de vez en cuando: cuanto antes se detectan, más fácil es acabar con ellos."
+    },
+    {
+      "id": "pulgon",
+      "name": "Pulgón",
+      "category": "plaga",
+      "summary": "Pequeños insectos verdes, negros o amarillos agrupados en los brotes tiernos. Dejan las hojas pegajosas y deformadas.",
+      "urgency": "media",
+      "treatment": [
+        "Elimínalos con un chorro de agua o pasando un paño húmedo.",
+        "Pulveriza jabón potásico cada 5-7 días durante 2-3 semanas.",
+        "Corta los brotes muy infestados.",
+        "Si las hojas están pegajosas o con una capa negra (negrilla), límpialas con agua y jabón."
+      ],
+      "prevention": "Suelen entrar desde la terraza o con flores cortadas: revisa los brotes nuevos en primavera."
+    },
+    {
+      "id": "mosca-sustrato",
+      "name": "Mosquitas del sustrato",
+      "category": "plaga",
+      "summary": "Pequeñas moscas negras que revolotean sobre la tierra. Sus larvas viven en tierra siempre húmeda y pueden dañar las raíces de plantas pequeñas.",
+      "urgency": "media",
+      "treatment": [
+        "Deja secar más la tierra entre riegos: es lo que más las frena.",
+        "Pon trampas adhesivas amarillas junto a la maceta para atrapar a los adultos.",
+        "Cubre la tierra con una capa de 1-2 cm de arena o grava fina.",
+        "Si hay muchas, riega con un producto a base de Bacillus thuringiensis israelensis (BTI)."
+      ],
+      "prevention": "No riegues si la tierra aún está húmeda y evita los sustratos con mucha materia orgánica sin descomponer."
+    },
+    {
+      "id": "hongos",
+      "name": "Hongos o bacterias en las hojas",
+      "category": "enfermedad",
+      "summary": "Manchas marrones u oscuras, a menudo con un borde amarillo o aspecto húmedo, o un polvillo blanco (oídio). Aparecen con humedad, hojas mojadas y poca ventilación.",
+      "urgency": "media",
+      "treatment": [
+        "Corta las hojas afectadas con tijeras desinfectadas con alcohol y tíralas a la basura (no al compost).",
+        "No mojes las hojas al regar y riega por la mañana.",
+        "Mejora la ventilación: sepárala un poco de otras plantas y de la pared.",
+        "Deja secar más la tierra entre riegos.",
+        "Si se sigue extendiendo, usa un fungicida para plantas de interior (para el oídio, uno a base de azufre) siguiendo el envase."
+      ],
+      "prevention": "Evita mojar las hojas y dejar las plantas muy juntas en sitios sin ventilación."
+    },
+    {
+      "id": "falta-nutrientes",
+      "name": "Falta de nutrientes",
+      "category": "nutricion",
+      "summary": "La tierra se ha quedado sin alimento. Las hojas viejas amarillean, las nuevas salen pálidas o pequeñas y la planta apenas crece.",
+      "urgency": "media",
+      "treatment": [
+        "Abona cada 2-4 semanas en primavera y verano con un fertilizante líquido adecuado (para plantas verdes, cactus, orquídeas…).",
+        "Usa la dosis del envase o incluso la mitad: es mejor quedarse corto.",
+        "No abones en invierno ni justo después de trasplantar: la tierra nueva ya trae nutrientes.",
+        "Si lleva más de 2 años en la misma tierra, trasplántala o cambia la capa de arriba."
+      ],
+      "prevention": "Abona de primavera a finales de verano, que es cuando crece."
+    },
+    {
+      "id": "raices-apretadas",
+      "name": "Raíces apretadas",
+      "category": "maceta",
+      "summary": "Ha llenado la maceta de raíces: ya no le queda tierra, se seca enseguida y deja de crecer.",
+      "urgency": "baja",
+      "treatment": [
+        "Trasplántala en primavera o a principios de verano a una maceta 2-4 cm más ancha (no mucho más grande).",
+        "Desenreda con cuidado las raíces que dan vueltas al fondo.",
+        "Usa tierra nueva adecuada para la especie: más drenante para suculentas, con corteza para orquídeas y aráceas.",
+        "Riega bien después de trasplantar y no abones durante un mes."
+      ],
+      "prevention": "Revisa los agujeros de la maceta una vez al año: si asoman raíces, toca trasplantar."
+    },
+    {
+      "id": "estres-cambio",
+      "name": "Estrés por cambio",
+      "category": "ambiente",
+      "summary": "Muchas plantas pierden algunas hojas o se ven tristes al cambiarlas de sitio, trasplantarlas o traerlas de la tienda. Suele ser pasajero.",
+      "urgency": "baja",
+      "treatment": [
+        "Déjala en un sitio fijo con buena luz y no la muevas más.",
+        "Sigue regando como siempre: no la riegues de más para «animarla».",
+        "No la abones ni la trasplantes hasta que vuelva a sacar hojas nuevas.",
+        "Ten paciencia: suele adaptarse en 2-4 semanas."
+      ],
+      "prevention": "Al traer una planta nueva, déjala unas semanas tranquila antes de trasplantarla."
+    },
+    {
+      "id": "frio-corrientes",
+      "name": "Frío o corrientes de aire",
+      "category": "ambiente",
+      "summary": "Las corrientes de aire, los cristales fríos o temperaturas por debajo de su mínimo dañan las hojas y hacen que se caigan.",
+      "urgency": "media",
+      "treatment": [
+        "Apártala de ventanas que se abren a menudo, puertas a la calle y cristales fríos en invierno.",
+        "Mantén la temperatura por encima del mínimo de su especie (lo tienes en su ficha).",
+        "Corta las hojas dañadas cuando veas que la planta se ha estabilizado."
+      ],
+      "prevention": "En invierno, separa las plantas unos centímetros del cristal por la noche."
+    }
+  ],
+  "rules": [
+    {
+      "cause": "exceso-riego",
+      "weight": 3,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada",
+          "humeda"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "que-hojas": [
+          "viejas",
+          "todas"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 3,
+      "symptoms": [
+        "hojas-blandas"
+      ]
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-blandas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada",
+          "humeda"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 3,
+      "symptoms": [
+        "hojas-caidas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada",
+          "humeda"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 2,
+      "symptoms": [
+        "moho-tierra"
+      ]
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-amarillas",
+        "hojas-caidas",
+        "hojas-blandas",
+        "manchas",
+        "moho-tierra"
+      ],
+      "answers": {
+        "plato": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas",
+        "hojas-caidas",
+        "hojas-blandas"
+      ],
+      "answers": {
+        "luz": [
+          "poca"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": -3,
+      "symptoms": [
+        "hojas-amarillas",
+        "hojas-caidas",
+        "hojas-blandas",
+        "puntas-marrones"
+      ],
+      "answers": {
+        "tierra": [
+          "seca",
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "pudricion-raices",
+      "weight": 6,
+      "symptoms": [
+        "tallo-podrido"
+      ]
+    },
+    {
+      "cause": "pudricion-raices",
+      "weight": 2,
+      "symptoms": [
+        "hojas-blandas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada"
+        ]
+      }
+    },
+    {
+      "cause": "pudricion-raices",
+      "weight": 1,
+      "symptoms": [
+        "moho-tierra"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada"
+        ]
+      }
+    },
+    {
+      "cause": "pudricion-raices",
+      "weight": 2,
+      "symptoms": [
+        "hojas-caidas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada"
+        ],
+        "plato": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 4,
+      "symptoms": [
+        "hojas-caidas"
+      ],
+      "answers": {
+        "tierra": [
+          "seca",
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "tierra": [
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 3,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "tierra": [
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "tierra": [
+          "seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 3,
+      "symptoms": [
+        "hojas-arrugadas"
+      ]
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-arrugadas"
+      ],
+      "answers": {
+        "tierra": [
+          "seca",
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "tierra": [
+          "seca",
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "caida-hojas"
+      ],
+      "answers": {
+        "tierra": [
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-caidas",
+        "hojas-amarillas",
+        "puntas-marrones",
+        "hojas-arrugadas"
+      ],
+      "answers": {
+        "estado-riego": [
+          "atrasada"
+        ]
+      }
+    },
+    {
+      "cause": "falta-riego",
+      "weight": -3,
+      "symptoms": [
+        "hojas-caidas",
+        "hojas-amarillas",
+        "hojas-arrugadas"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 4,
+      "symptoms": [
+        "crecimiento-estirado"
+      ]
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 2,
+      "symptoms": [
+        "crecimiento-estirado"
+      ],
+      "answers": {
+        "luz": [
+          "poca",
+          "media"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 3,
+      "symptoms": [
+        "hojas-palidas"
+      ],
+      "answers": {
+        "luz": [
+          "poca"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 3,
+      "symptoms": [
+        "crecimiento-lento"
+      ],
+      "answers": {
+        "luz": [
+          "poca"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "luz": [
+          "poca"
+        ],
+        "que-hojas": [
+          "viejas"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 2,
+      "symptoms": [
+        "caida-hojas"
+      ],
+      "answers": {
+        "luz": [
+          "poca"
+        ]
+      }
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 2,
+      "symptoms": [
+        "hojas-palidas",
+        "crecimiento-estirado",
+        "crecimiento-lento"
+      ],
+      "answers": {
+        "especie-luz": [
+          "indirecta-brillante",
+          "sol-directo"
+        ],
+        "luz": [
+          "poca",
+          "media"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 3,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "secas-claras"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 3,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "secas-claras"
+        ],
+        "luz": [
+          "sol-directo"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 3,
+      "symptoms": [
+        "hojas-palidas"
+      ],
+      "answers": {
+        "luz": [
+          "sol-directo"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 1,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "luz": [
+          "sol-directo"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 2,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "luz": [
+          "sol-directo"
+        ]
+      }
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 2,
+      "symptoms": [
+        "hojas-palidas",
+        "manchas",
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "luz": [
+          "sol-directo"
+        ],
+        "especie-luz": [
+          "baja",
+          "media",
+          "indirecta-brillante"
+        ]
+      }
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 3,
+      "symptoms": [
+        "puntas-marrones"
+      ]
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 3,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "ambiente": [
+          "calefaccion"
+        ]
+      }
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 3,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "especie-humedad": [
+          "alta"
+        ]
+      }
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 2,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "especie-humedad": [
+          "alta"
+        ]
+      }
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 2,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "ambiente": [
+          "calefaccion"
+        ]
+      }
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": -2,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "especie-humedad": [
+          "baja"
+        ]
+      }
+    },
+    {
+      "cause": "cal-sales",
+      "weight": 5,
+      "symptoms": [
+        "costra-blanca"
+      ]
+    },
+    {
+      "cause": "cal-sales",
+      "weight": 1,
+      "symptoms": [
+        "puntas-marrones"
+      ]
+    },
+    {
+      "cause": "cal-sales",
+      "weight": 3,
+      "symptoms": [
+        "puntas-marrones"
+      ],
+      "answers": {
+        "abono": [
+          "mucho"
+        ]
+      }
+    },
+    {
+      "cause": "cal-sales",
+      "weight": 1,
+      "symptoms": [
+        "puntas-marrones",
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "abono": [
+          "mucho"
+        ]
+      }
+    },
+    {
+      "cause": "cochinilla",
+      "weight": 7,
+      "symptoms": [
+        "bichos"
+      ],
+      "answers": {
+        "tipo-bichos": [
+          "algodon",
+          "escamas"
+        ]
+      }
+    },
+    {
+      "cause": "cochinilla",
+      "weight": 2,
+      "symptoms": [
+        "hojas-pegajosas"
+      ]
+    },
+    {
+      "cause": "cochinilla",
+      "weight": 1,
+      "symptoms": [
+        "hojas-pegajosas"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "cochinilla",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas",
+        "crecimiento-lento",
+        "caida-hojas"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 6,
+      "symptoms": [
+        "telaranas"
+      ]
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 6,
+      "symptoms": [
+        "bichos"
+      ],
+      "answers": {
+        "tipo-bichos": [
+          "puntitos"
+        ]
+      }
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 5,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "punteado"
+        ]
+      }
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 1,
+      "symptoms": [
+        "telaranas",
+        "manchas",
+        "hojas-palidas"
+      ],
+      "answers": {
+        "ambiente": [
+          "calefaccion"
+        ]
+      }
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 2,
+      "symptoms": [
+        "hojas-palidas"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "trips",
+      "weight": 7,
+      "symptoms": [
+        "bichos"
+      ],
+      "answers": {
+        "tipo-bichos": [
+          "alargados"
+        ]
+      }
+    },
+    {
+      "cause": "trips",
+      "weight": 6,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "plateadas"
+        ]
+      }
+    },
+    {
+      "cause": "trips",
+      "weight": 1,
+      "symptoms": [
+        "hojas-palidas",
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "pulgon",
+      "weight": 7,
+      "symptoms": [
+        "bichos"
+      ],
+      "answers": {
+        "tipo-bichos": [
+          "verdes"
+        ]
+      }
+    },
+    {
+      "cause": "pulgon",
+      "weight": 2,
+      "symptoms": [
+        "hojas-pegajosas"
+      ]
+    },
+    {
+      "cause": "pulgon",
+      "weight": 2,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "mosca-sustrato",
+      "weight": 7,
+      "symptoms": [
+        "bichos"
+      ],
+      "answers": {
+        "tipo-bichos": [
+          "mosquitas"
+        ]
+      }
+    },
+    {
+      "cause": "mosca-sustrato",
+      "weight": 1,
+      "symptoms": [
+        "moho-tierra"
+      ],
+      "answers": {
+        "insectos": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "hongos",
+      "weight": 5,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "oscuras-halo"
+        ]
+      }
+    },
+    {
+      "cause": "hongos",
+      "weight": 7,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "polvo-blanco"
+        ]
+      }
+    },
+    {
+      "cause": "hongos",
+      "weight": 2,
+      "symptoms": [
+        "manchas"
+      ],
+      "answers": {
+        "tipo-manchas": [
+          "oscuras-halo"
+        ],
+        "tierra": [
+          "empapada",
+          "humeda"
+        ]
+      }
+    },
+    {
+      "cause": "hongos",
+      "weight": 1,
+      "symptoms": [
+        "manchas"
+      ]
+    },
+    {
+      "cause": "hongos",
+      "weight": 1,
+      "symptoms": [
+        "moho-tierra"
+      ]
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 3,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "que-hojas": [
+          "viejas"
+        ],
+        "abono": [
+          "nunca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 3,
+      "symptoms": [
+        "hojas-palidas"
+      ],
+      "answers": {
+        "abono": [
+          "nunca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 2,
+      "symptoms": [
+        "crecimiento-lento"
+      ],
+      "answers": {
+        "abono": [
+          "nunca"
+        ]
+      }
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas",
+        "hojas-palidas",
+        "crecimiento-lento"
+      ],
+      "answers": {
+        "trasplante": [
+          "mas-2"
+        ]
+      }
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "que-hojas": [
+          "nuevas"
+        ]
+      }
+    },
+    {
+      "cause": "raices-apretadas",
+      "weight": 6,
+      "symptoms": [
+        "raices-fuera"
+      ]
+    },
+    {
+      "cause": "raices-apretadas",
+      "weight": 3,
+      "symptoms": [
+        "crecimiento-lento"
+      ],
+      "answers": {
+        "trasplante": [
+          "mas-2"
+        ]
+      }
+    },
+    {
+      "cause": "raices-apretadas",
+      "weight": 1,
+      "symptoms": [
+        "crecimiento-lento",
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "trasplante": [
+          "1-2"
+        ]
+      }
+    },
+    {
+      "cause": "raices-apretadas",
+      "weight": 2,
+      "symptoms": [
+        "hojas-caidas",
+        "hojas-amarillas"
+      ],
+      "answers": {
+        "trasplante": [
+          "mas-2"
+        ],
+        "tierra": [
+          "seca",
+          "muy-seca"
+        ]
+      }
+    },
+    {
+      "cause": "estres-cambio",
+      "weight": 5,
+      "symptoms": [
+        "caida-hojas"
+      ],
+      "answers": {
+        "cambio": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "estres-cambio",
+      "weight": 2,
+      "symptoms": [
+        "hojas-amarillas",
+        "hojas-caidas"
+      ],
+      "answers": {
+        "cambio": [
+          "si"
+        ]
+      }
+    },
+    {
+      "cause": "estres-cambio",
+      "weight": 1,
+      "symptoms": [
+        "caida-hojas"
+      ]
+    },
+    {
+      "cause": "frio-corrientes",
+      "weight": 4,
+      "symptoms": [
+        "caida-hojas"
+      ],
+      "answers": {
+        "ambiente": [
+          "corriente"
+        ]
+      }
+    },
+    {
+      "cause": "frio-corrientes",
+      "weight": 2,
+      "symptoms": [
+        "hojas-blandas",
+        "manchas"
+      ],
+      "answers": {
+        "ambiente": [
+          "corriente"
+        ]
+      }
+    },
+    {
+      "cause": "frio-corrientes",
+      "weight": 1,
+      "symptoms": [
+        "hojas-enrolladas"
+      ],
+      "answers": {
+        "ambiente": [
+          "corriente"
+        ]
+      }
+    },
+    {
+      "cause": "pudricion-raices",
+      "weight": 3,
+      "symptoms": [
+        "tallo-podrido"
+      ],
+      "answers": {
+        "tierra": [
+          "empapada",
+          "humeda"
+        ]
+      }
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-amarillas"
+      ]
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ]
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ]
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 1,
+      "symptoms": [
+        "hojas-amarillas"
+      ]
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 2,
+      "symptoms": [
+        "hojas-caidas"
+      ]
+    },
+    {
+      "cause": "exceso-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-caidas"
+      ]
+    },
+    {
+      "cause": "falta-riego",
+      "weight": 1,
+      "symptoms": [
+        "hojas-enrolladas"
+      ]
+    },
+    {
+      "cause": "humedad-baja",
+      "weight": 1,
+      "symptoms": [
+        "hojas-enrolladas"
+      ]
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 1,
+      "symptoms": [
+        "hojas-palidas"
+      ]
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 1,
+      "symptoms": [
+        "hojas-palidas"
+      ]
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 1,
+      "symptoms": [
+        "hojas-palidas"
+      ]
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 1,
+      "symptoms": [
+        "crecimiento-lento"
+      ]
+    },
+    {
+      "cause": "falta-nutrientes",
+      "weight": 1,
+      "symptoms": [
+        "crecimiento-lento"
+      ]
+    },
+    {
+      "cause": "raices-apretadas",
+      "weight": 1,
+      "symptoms": [
+        "crecimiento-lento"
+      ]
+    },
+    {
+      "cause": "frio-corrientes",
+      "weight": 1,
+      "symptoms": [
+        "caida-hojas"
+      ]
+    },
+    {
+      "cause": "poca-luz",
+      "weight": 1,
+      "symptoms": [
+        "caida-hojas"
+      ]
+    },
+    {
+      "cause": "cochinilla",
+      "weight": 2,
+      "symptoms": [
+        "bichos"
+      ]
+    },
+    {
+      "cause": "arana-roja",
+      "weight": 1,
+      "symptoms": [
+        "bichos"
+      ]
+    },
+    {
+      "cause": "pulgon",
+      "weight": 1,
+      "symptoms": [
+        "bichos"
+      ]
+    },
+    {
+      "cause": "trips",
+      "weight": 1,
+      "symptoms": [
+        "bichos"
+      ]
+    },
+    {
+      "cause": "mosca-sustrato",
+      "weight": 1,
+      "symptoms": [
+        "bichos"
+      ]
+    },
+    {
+      "cause": "sol-directo",
+      "weight": 1,
+      "symptoms": [
+        "manchas"
+      ]
+    }
+  ]
+}
